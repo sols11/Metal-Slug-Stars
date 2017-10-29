@@ -1,0 +1,465 @@
+fileFormatVersion: 2
+guid: dc22b0acdf01e9a4bb7e6af9b76e108b
+timeCreated: 1509243699
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: ArabianDeath_0
+    21300002: ArabianDeath_1
+    21300004: ArabianDeath_2
+    21300006: ArabianDeath_3
+    21300008: ArabianDeath_4
+    21300010: ArabianDeath_5
+    21300012: ArabianDeath_6
+    21300014: ArabianDeath_7
+    21300016: ArabianDeath_8
+    21300018: ArabianDeath_9
+    21300020: ArabianDeath_10
+    21300022: ArabianDeath_11
+    21300024: ArabianDeath_12
+    21300026: ArabianDeath_13
+    21300028: ArabianDeath_14
+    21300030: ArabianDeath_15
+    21300032: ArabianDeath_16
+    21300034: ArabianDeath_17
+    21300036: ArabianDeath_18
+    21300038: ArabianDeath_19
+    21300040: ArabianDeath_20
+    21300042: ArabianDeath_21
+    21300044: ArabianDeath_22
+    21300046: ArabianDeath_17
+    21300048: ArabianDeath_24
+    21300050: ArabianDeath_18
+    21300052: ArabianDeath_20
+    21300054: ArabianDeath_14
+    21300056: ArabianDeath_28
+    21300058: ArabianDeath_29
+    21300060: ArabianDeath_15
+    21300062: ArabianDeath_31
+    21300064: ArabianDeath_32
+    21300066: ArabianDeath_33
+    21300068: ArabianDeath_34
+    21300070: ArabianDeath_16
+    21300072: ArabianDeath_21
+    21300074: ArabianDeath_37
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 24
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ArabianDeath_0
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 3
+        width: 36
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ArabianDeath_1
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 2
+        width: 38
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ArabianDeath_2
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 3
+        width: 42
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ArabianDeath_3
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 3
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ArabianDeath_4
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 3
+        width: 50
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ArabianDeath_5
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 3
+        width: 51
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ArabianDeath_6
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 3
+        width: 53
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ArabianDeath_7
+      rect:
+        serializedVersion: 2
+        x: 386
+        y: 3
+        width: 53
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ArabianDeath_8
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 31
+        width: 4
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ArabianDeath_9
+      rect:
+        serializedVersion: 2
+        x: 439
+        y: 3
+        width: 54
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ArabianDeath_10
+      rect:
+        serializedVersion: 2
+        x: 494
+        y: 3
+        width: 60
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ArabianDeath_11
+      rect:
+        serializedVersion: 2
+        x: 555
+        y: 3
+        width: 58
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ArabianDeath_12
+      rect:
+        serializedVersion: 2
+        x: 561
+        y: 25
+        width: 11
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ArabianDeath_13
+      rect:
+        serializedVersion: 2
+        x: 614
+        y: 3
+        width: 53
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ArabianDeath_19
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 3
+        width: 49
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ArabianDeath_17
+      rect:
+        serializedVersion: 2
+        x: 825
+        y: 3
+        width: 52
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ArabianDeath_24
+      rect:
+        serializedVersion: 2
+        x: 843
+        y: 27
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ArabianDeath_18
+      rect:
+        serializedVersion: 2
+        x: 878
+        y: 3
+        width: 50
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ArabianDeath_20
+      rect:
+        serializedVersion: 2
+        x: 929
+        y: 3
+        width: 50
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ArabianDeath_14
+      rect:
+        serializedVersion: 2
+        x: 668
+        y: 3
+        width: 51
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ArabianDeath_28
+      rect:
+        serializedVersion: 2
+        x: 669
+        y: 16
+        width: 4
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ArabianDeath_29
+      rect:
+        serializedVersion: 2
+        x: 683
+        y: 17
+        width: 4
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ArabianDeath_15
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 3
+        width: 51
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ArabianDeath_34
+      rect:
+        serializedVersion: 2
+        x: 555
+        y: 9
+        width: 10
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ArabianDeath_16
+      rect:
+        serializedVersion: 2
+        x: 772
+        y: 3
+        width: 52
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ArabianDeath_21
+      rect:
+        serializedVersion: 2
+        x: 980
+        y: 3
+        width: 50
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ArabianDeath_37
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 4
+        width: 7
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
