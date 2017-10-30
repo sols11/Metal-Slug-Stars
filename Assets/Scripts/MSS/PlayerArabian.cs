@@ -13,20 +13,20 @@ namespace MetalSlugStars
         /// 若角色朝左时Scale为1，则IsReverse=true
         /// </summary>
         public bool IsReverse { get; set; }
+        public bool IsDead { get; set; }
         /// <summary>
-        /// 禁止左右和跳跃键
+        /// 禁止左右移动
         /// 在攻击，死亡等时候会用上
         /// </summary>
         public bool CanMove { get; set; }
-
-        public bool CanJump;
+        public bool CanJump { get; set; }
 
         public string PlayerIndex;
 
         public Transform groundCheckPos;
         private Animator animator;
         private Rigidbody2D rg2d;
-        private Collider2D charCollider;
+        private Collider2D collider2d;
         private Vector3 velocity;
         private AnimatorStateInfo stateInfo;
         private string aniAttack = "Attack";
@@ -54,7 +54,7 @@ namespace MetalSlugStars
             groundCheckPos = transform.GetChild(1).transform;
             animator = GetComponent<Animator>();
             rg2d = GetComponent<Rigidbody2D>();
-            charCollider = GetComponent<Collider2D>();
+            collider2d = GetComponent<Collider2D>();
         }
 
         private void FixedUpdate()
@@ -104,11 +104,11 @@ namespace MetalSlugStars
             if (IsGround)
             {
                 animator.SetFloat(aniWalk, Mathf.Abs(h));
-                charCollider.isTrigger = false;
+                collider2d.isTrigger = false;
             }
             else
             {
-                charCollider.isTrigger = true;
+                collider2d.isTrigger = true;
             }
             FaceToward();
         }
@@ -165,6 +165,7 @@ namespace MetalSlugStars
         {
             CanMove = false;
             CanJump = false;
+            IsDead = true;
             animator.SetTrigger(aniDeath);
         }
 
