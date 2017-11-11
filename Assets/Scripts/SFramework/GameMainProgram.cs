@@ -69,13 +69,13 @@ namespace SFramework
         public void Awake()
         {
             // 注意Awake不能放在构造函数内执行，因为这将导致主程序未构造完毕就开始使用，破坏了单例的存在，造成栈溢出错误
-            dataBaseMgr.Awake();
-            gameDataMgr.Awake();
-            languageMgr.Awake();
+            //dataBaseMgr.Awake();
+            //gameDataMgr.Awake();
+            //languageMgr.Awake();
             uiManager.Awake();
-            audioMgr.Awake();
-            dialogMgr.Awake();
-            npcMgr.Awake();
+            //audioMgr.Awake();
+            //dialogMgr.Awake();
+            //npcMgr.Awake();
         }
 
         // 有要执行的方法再添加到这里
@@ -95,7 +95,7 @@ namespace SFramework
             resourcesMgr.Release();
 			playerMgr.Release();
 			enemyMgr.Release();
-            npcMgr.Release();
+            //npcMgr.Release();
             uiManager.Release();
             uiMaskMgr.Release();
 		}
@@ -104,7 +104,7 @@ namespace SFramework
             resourcesMgr.Update();
             playerMgr.Update();
 			enemyMgr.Update();
-            npcMgr.Update();
+            //npcMgr.Update();
             uiManager.Update();
             courseMgr.Update();
         }

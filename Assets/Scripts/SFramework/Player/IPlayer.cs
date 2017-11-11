@@ -9,13 +9,19 @@ namespace SFramework
     /// + Player的所有属性
     /// </summary>
 	public class IPlayer : ICharacter
-	{
-		protected bool canMove = false;   //CanMovePosition
+    {
+        protected string aniAttack = "Attack";
+        protected string aniWalk = "Walk";
+        protected string aniJump = "Jump";
+        protected string aniDeath = "Death";
+
+        protected bool canMove;
 		protected float h;
 		protected float v;
         protected GameData gameData;
 
 		public float Speed { get; set; }    // AvoidSpeed用MoveSpeed*2代替
+	    public string PlayerIndex { get; set; }
 
         //Player的HP,SP需要更新UI
         public override int CurrentHP
@@ -43,18 +49,16 @@ namespace SFramework
 			get { return canMove; }
 			set { h = 0; v = 0; canMove = value; }
 		}
-        
+	    public bool CanJump { get; set; }
+
         /// <summary>
         /// Initialize只在第一次创建时执行初始化代码，之后切换Scene时都不用再次初始化，所以Data也没有改变
         /// </summary>
         /// <param name="gameObject"></param>
         public IPlayer(GameObject gameObject):base(gameObject)
         {
-            if (GameObjectInScene != null)
-            {
-                animator = GameObjectInScene.GetComponent<Animator>();
-                Rg2d = GameObjectInScene.GetComponent<Rigidbody2D>();
-            }
+            canMove = true;
+            CanJump = true;
         } 
 
         public virtual void Hurt(PlayerHurtAttr playerHurtAttr) { }
@@ -62,6 +66,9 @@ namespace SFramework
         public override void Dead()
         {
             base.Dead();
+            CanMove = false;
+            CanJump = false;
+            animator.SetTrigger(aniDeath);
             GameMainProgram.Instance.eventMgr.InvokeEvent(EventName.PlayerDead);    // 触发死亡事件
         }
 

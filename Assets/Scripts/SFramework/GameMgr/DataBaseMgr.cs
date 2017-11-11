@@ -12,8 +12,6 @@ namespace SFramework
     {
         // 字典存放所有种类的Item，key也可以用enum
         public Dictionary<string, IEquip> dicEquip;
-        public Dictionary<string, IEquip> dicEnemyEquip;
-        public IProp[] Props { get; private set; }
 
         public DataBaseMgr(GameMainProgram gameMain) : base(gameMain)
         {
@@ -21,9 +19,7 @@ namespace SFramework
 
         public override void Awake()
         {
-            dicEquip = gameMain.fileMgr.LoadJsonDataBase<Dictionary<string, IEquip>>("Equip");
-            Props = gameMain.fileMgr.LoadJsonDataBase<IProp[]>("Prop");
-            dicEnemyEquip = gameMain.fileMgr.LoadJsonDataBase<Dictionary<string, IEquip>>("EnemyEquip");
+            //dicEquip = gameMain.fileMgr.LoadJsonDataBase<Dictionary<string, IEquip>>("Equip");
 
             //gameMain.fileMgr.CreateJsonDataBase("Tasks",Tasks);
         }

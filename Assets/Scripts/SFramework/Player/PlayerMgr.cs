@@ -10,12 +10,14 @@ namespace SFramework
     /// </summary>
 	public class PlayerMgr : IGameMgr
 	{
+        private List<IPlayer> playersInScene;
         public IPlayer CurrentPlayer { get; private set; } //切换场景时不要消除引用
         public bool CanInput { get; set; }
 
         public PlayerMgr(GameMainProgram gameMain):base(gameMain)
-		{			
-		}
+		{
+		    playersInScene = new List<IPlayer>();
+        }
 
         public override void Initialize()
         {
@@ -23,45 +25,45 @@ namespace SFramework
                 CurrentPlayer.Initialize();
         }
 
-        public override void Release() {
-            // Destroy
-            if (CurrentPlayer != null)
-            {
-                CurrentPlayer.Release();
-                GameObject.Destroy(CurrentPlayer.GameObjectInScene);
-                CurrentPlayer = null;
-            }
-            else
-                Debug.Log("无CurrentPlayer可以销毁！");
-        }
-
-		public override void Update() {
-            if(CurrentPlayer!=null&& CanInput)
-                CurrentPlayer.Update();
-		}
-
-		public override void FixedUpdate() {
-            if(CurrentPlayer!=null&& CanInput)
-                CurrentPlayer.FixedUpdate();
-		}
-
-	    public void BuildPlayer(Vector3 position,Quaternion quaternion)
+	    public override void Release()
 	    {
-            //if(CurrentPlayer==null)
-	            //SetCurrentPlayer(new DreamKeeper.PlayerYuka(GameMainProgram.Instance.resourcesMgr.
-                    //LoadAsset(@"Players\BlockBattle", false,position, quaternion)));
-	        //gameMain.gameDataMgr.Load(CurrentPlayer);   // 读档
+	        foreach (IPlayer p in playersInScene)
+	        {
+	            if (p != null)
+	                p.Release();
+	        }
+	        playersInScene.Clear();
 	    }
 
-        public void SetCurrentPlayer(IPlayer player)
-		{
-             CurrentPlayer = player;
-             CurrentPlayer.Initialize();    // 设置Player时进行初始化
+	    public override void Update()
+	    {
+	        foreach (IPlayer p in playersInScene)
+	            p.Update();
+	    }
+
+	    public override void FixedUpdate()
+	    {
+	        foreach (IPlayer p in playersInScene)
+	            p.FixedUpdate();
         }
 
-        public void SetPlayerPos(Vector3 pos)
-        {
-             CurrentPlayer.GameObjectInScene.transform.position = pos;
-        }
+	    public void AddPlayer(IPlayer player)
+	    {
+	        if (player != null)
+	        {
+	            playersInScene.Add(player);
+	            player.Initialize();
+	        }
+	    }
+
+	    private void RemovePlayer(IPlayer player)
+	    {
+	        if (player != null)
+	        {
+	            playersInScene.Remove(player);
+	            player.Release();
+	        }
+	    }
+
     }
 }

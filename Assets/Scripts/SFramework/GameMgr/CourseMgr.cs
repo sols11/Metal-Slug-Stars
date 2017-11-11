@@ -111,8 +111,6 @@ namespace SFramework
         {
             GameMainProgram.Instance.courseMgr.Enable = false;
             yield return new WaitForSeconds(2);
-            GameMainProgram.Instance.uiManager.ShowUIForms("FadeIn");
-            yield return new WaitForSeconds(2.5f);
             //GameMainProgram.Instance.playerMgr.Release();
 
         }

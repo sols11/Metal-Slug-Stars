@@ -19,8 +19,13 @@ namespace SFramework
 		//动画状态机
 		public Animator animator;
 		protected AnimatorStateInfo stateInfo;
+	    protected Collider2D collider2d;
+	    protected Vector3 velocity;
+	    protected float scaleX;
+	    protected int groundLayerIndex;
+	    protected Transform groundCheckPos;
 
-		public string Name { get; set; }
+        public string Name { get; set; }
 		public float MoveSpeed { get; set; }
         /// <summary>
         /// set时将CurrentHP回复满
@@ -57,21 +62,45 @@ namespace SFramework
             }
         }
         public float SPpercent { get; protected set; }
+        // 属性
+	    public float WalkSpeed { get; set; }
+	    public float JumpHeight { get; set; }
+	    public bool IsGround { get; set; }
+	    /// <summary>
+	    /// 若角色朝左时Scale为1，则IsReverse=true
+	    /// </summary>
+	    public bool IsReverse { get; set; }
+	    public bool IsDead { get { return isDead; } }
+
         //设置对应物体
         public GameObject GameObjectInScene { get; set; }
-		public bool IsDead { get { return isDead; } }
         public Rigidbody2D Rg2d { get; set; }
 
         //构造函数
         public ICharacter(GameObject gameObject)
         {
             GameObjectInScene = gameObject;
+            groundLayerIndex = LayerMask.GetMask("Ground");
+            if (GameObjectInScene != null)
+            {
+                animator = GameObjectInScene.GetComponent<Animator>();
+                Rg2d = GameObjectInScene.GetComponent<Rigidbody2D>();
+                collider2d = GameObjectInScene.GetComponent<Collider2D>();
+                // 固定放第2个
+                groundCheckPos = GameObjectInScene.transform.GetChild(1).transform;
+                scaleX = GameObjectInScene.transform.localScale.x;
+            }
         }
 
         public virtual void Initialize() { }
 		public virtual void Release() { }
 		public virtual void Update() { }
-		public virtual void FixedUpdate() { }
+
+	    public virtual void FixedUpdate()
+	    {
+	        stateInfo = animator.GetCurrentAnimatorStateInfo(0);
+	        GroundCheck();
+        }
 
         // 方法
         public virtual void Dead()
@@ -80,5 +109,35 @@ namespace SFramework
 				return;
 			isDead = true;
 		}
-	}
+
+	    protected void GroundCheck()
+	    {
+	        //地面检测
+	        IsGround = Physics2D.Raycast(groundCheckPos.position, Vector2.down,
+	            0.1f, groundLayerIndex);
+	        //RaycastHit2D ray = Physics2D.Raycast(transform.position + new Vector3(0, -1.6f, 0), Vector2.down,
+	        // 0.15f, groundLayerIndex);
+	    }
+
+	    protected void FaceToward()
+	    {
+	        // 往右走x为正，左走为负，IsReverse则相反
+	        if (Rg2d.velocity.x > 0.05f)
+	        {
+	            if (IsReverse)
+	                scaleX = -Mathf.Abs(scaleX);
+	            else
+	                scaleX = Mathf.Abs(scaleX);
+	        }
+	        else if (Rg2d.velocity.x < -0.05f)
+	        {
+	            if (IsReverse)
+	                scaleX = Mathf.Abs(scaleX);
+	            else
+	                scaleX = -Mathf.Abs(scaleX);
+	        }
+
+	        GameObjectInScene.transform.localScale = new Vector3(scaleX, GameObjectInScene.transform.localScale.y, GameObjectInScene.transform.localScale.z);
+	    }
+    }
 }
