@@ -20,7 +20,7 @@ namespace SFramework
 
         public override void Awake()
         {
-            //dicTalks= gameMain.fileMgr.LoadJsonDataBase<Dictionary<string, List<string>>>("Dialog");
+            dicTalks= gameMain.fileMgr.LoadJsonDataBase<Dictionary<string, List<string>>>("Dialog");
         }
 
         public void StartDialog(string key,UnityAction dialogCompleteAction=null)

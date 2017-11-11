@@ -22,7 +22,6 @@ namespace SFramework
         {
             gameMain.eventMgr.StartListening(EventName.PlayerDead, NotifyPlayerDead);
         }
-
         public override void Release()
         {
             foreach (IEnemy e in enemysInScene)
